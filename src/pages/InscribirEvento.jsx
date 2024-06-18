@@ -1,11 +1,14 @@
 //PAGINA DE INSCRIPCIÓN A UN EVENTO
 
-import React from 'react'
+
+//TIENE QUE REGISTRAR LAS COSAS QUE LLEVE EN EL EVENTO. 
+
+//dieta especial, acompañante (si/no, y cuantas personas (boton con números))
 
 const InscribirEvento = () => {
-    return (
-        <div>InscribirEvento</div>
-    )
+
+    <div>Inscribirse usuario al evento</div>
+
 }
 
 export default InscribirEvento

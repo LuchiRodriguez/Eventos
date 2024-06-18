@@ -4,7 +4,12 @@ import React from 'react'
 
 const ListaObjetos = () => {
     return (
-        <div>ListaObjetos</div>
+        <div>
+            <ul>
+                <li></li>
+                
+            </ul>
+        </div>
     )
 }
 

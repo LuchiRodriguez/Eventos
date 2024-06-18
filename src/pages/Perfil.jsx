@@ -8,7 +8,7 @@ const Perfil = () => {
             <p>{nombre}</p>
             <p>{apellido}</p>
             <p>{edad}</p>
-            <p>{intereses personales}</p>
+            <p>{intereses}</p>
         </div>
     )
 }
