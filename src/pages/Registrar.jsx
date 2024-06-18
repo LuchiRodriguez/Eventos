@@ -3,24 +3,24 @@
 
 import { useState } from "react"
 import AccesoPopUp from "../components/AccesoPopUp"
+import { loguear } from '../app/api';
 
 
 
 const Acceso = () => {
-
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+    const login = () => {
+        loguear(username, password)
+    }
     return (
         <Container>
             <h1>Bienvenido a BarnaEvents</h1>
             <div>
-                <form>
-                    <label for="username">username</label><br></br>
-                    <input type="text" id="username" />
-
-                    <label for="password" id="password">password</label>
-                    <input type="text" id="password" />
-                    <button onClick={ }>Logueate</button>
-                </form>
-
+                <h3>Acceso</h3>
+                <input type="text" placeholder="Usuario" onChange={setUsername(e.target.value)} />
+                <input type="text" placeholder="Password" onChange={setPassword(e.target.value)} />
+                <button onClick={login}>Login</button>
             </div>
 
 
