@@ -26,8 +26,6 @@ const EventoCreate = () => {
             <p>Qué es necesario traer en el evento? </p>
             <textarea />
             <button onClick={guardar}></button>
-
-
         </div>
     )
 }
