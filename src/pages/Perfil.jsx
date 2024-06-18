@@ -1,10 +1,15 @@
-//CAMBIAR EL NOMBRE, APELLIDO, EDAD E INTERESES PERSONALES
 
 import React from 'react'
 
 const Perfil = () => {
     return (
-        <div>Perfil</div>
+        <div>
+            <h1>Datos personales</h1>
+            <p>{nombre}</p>
+            <p>{apellido}</p>
+            <p>{edad}</p>
+            <p>{intereses personales}</p>
+        </div>
     )
 }
 

@@ -10,12 +10,12 @@ import InscribirEvento from '../Layout/InscribirEvento'
 const Router = () => {
     <BrowserRouter>
         <Routes>
-            <Route index element={<ListaObjetos />} />
+            <Route index element={<ListaEventos />} />
             <Route path="/perfil" element={<Perfil />} />
             <Route path="/acceso" element={<Acceso />} />
             <Route path="/crearevento" element={<EventoCreate />} />
             <Route path="/listaeventos" element={<ListaEventos />} />
-            <Route path="/inscribirevento" element={<InscribirEvento />} />
+            <Route path="/inscribirobjetos" element={<InscribirObjetos />} />
         </Routes>
     </BrowserRouter>
 }
