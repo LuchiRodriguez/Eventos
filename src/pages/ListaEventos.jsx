@@ -1,5 +1,7 @@
 //PAGINA DE LISTADO DE EVENTOS. 
 
+import EventoCreate from "./EventoCreate"
+
 const ListaEventos = () => {
     return (
         <div>
@@ -27,7 +29,7 @@ const ListaEventos = () => {
                         <button>+</button>
                     </div>
                 </section>
-                <button>Crear evento</button>
+                <button onClick={<EventoCreate />}>Crear evento</button>
             </div>
         </div>
     )
