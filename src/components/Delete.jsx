@@ -10,7 +10,7 @@ const Delete = () => {
         <div>
             <h1>Delete</h1>
             <p>
-                <input type="text" placeholder='Guest Id' onChange={e => setId(e.target.value)} />
+                <input type="text" placeholder='Event ID' onChange={e => setId(e.target.value)} />
                 <button onClick={async () => {
                     await deleteEvento(id);
                     navigate('/');
