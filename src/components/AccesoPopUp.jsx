@@ -8,16 +8,16 @@ const AccesoPopUp = () => {
             (userExist ? <div>
                 <form >
                     <label for="username">Username:</label><br></br>
-                    <input type="text" id="username" onChange={setPersona({ ...persona, username: e.target.value })}></input><br></br>
+                    <input type="text" id="username" onChange={() => { setPersona({ ...persona, username: e.target.value }) }}></input><br></br>
 
                     <label for="pasword">Password:</label><br></br>
-                    <input type="text" id="pasword" onChange={setPersona({ ...persona, password: e.target.value })} ></input><br></br>
+                    <input type="text" id="pasword" onChange={() => { setPersona({ ...persona, password: e.target.value }) }} ></input><br></br>
 
                     <label for="edad">edad:</label><br></br>
-                    <input type="number" id="edad" onChange={setPersona({ ...persona, edad: e.target.value })}></input><br></br>
+                    <input type="number" id="edad" onChange={() => { setPersona({ ...persona, edad: e.target.value }) }}></input><br></br>
 
                     <label for="email">correo electronico:</label><br></br>
-                    <input type="text" id="email" onChange={setPersona({ ...persona, email: e.target.value })} ></input><br></br>
+                    <input type="text" id="email" onChange={() => { setPersona({ ...persona, email: e.target.value }) }} ></input><br></br>
 
                     <button onClick={() => }>Crear Usuario</button>
                 </form>
