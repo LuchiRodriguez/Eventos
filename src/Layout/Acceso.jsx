@@ -3,10 +3,10 @@
 
 import React from 'react'
 
-const Registrar = () => {
+const Acceso = () => {
     return (
-        <div>Registrar</div>
+        <div>Acceso</div>
     )
 }
 
-export default Registrar
+export default Acceso
