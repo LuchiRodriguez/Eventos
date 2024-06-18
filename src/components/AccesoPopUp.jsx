@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import { createEvento } from '../app/api';
+import { useState } from "react"
+import { createPerfil } from "../app/api"
+import { Navigate } from "react-router-dom"
 
 const AccesoPopUp = () => {
     const [persona, setPersona] = useState({})
@@ -7,27 +8,24 @@ const AccesoPopUp = () => {
 
     return (
         <div>
-
             <form >
-                <label for="username">Username:</label><br></br>
-                <input type="text" id="username" onChange={() => { setPersona({ ...persona, username: e.target.value }) }}></input><br></br>
+                <label htmlFor="username">Username:</label><br></br>
+                <input type="text" id="username" onChange={(e) => { setPersona({ ...persona, username: e.target.value }) }}></input><br></br>
 
-                <label for="pasword">Password:</label><br></br>
-                <input type="text" id="pasword" onChange={() => { setPersona({ ...persona, password: e.target.value }) }} ></input><br></br>
+                <label htmlFor="pasword">Password:</label><br></br>
+                <input type="text" id="pasword" onChange={(e) => { setPersona({ ...persona, password: e.target.value }) }} ></input><br></br>
 
-                <label for="edad">edad:</label><br></br>
-                <input type="number" id="edad" onChange={() => { setPersona({ ...persona, edad: e.target.value }) }}></input><br></br>
+                <label htmlFor="edad">edad:</label><br></br>
+                <input type="number" id="edad" onChange={(e) => { setPersona({ ...persona, edad: e.target.value }) }}></input><br></br>
 
-                <label for="email">correo electronico:</label><br></br>
-                <input type="text" id="email" onChange={() => { setPersona({ ...persona, email: e.target.value }) }} ></input><br></br>
+                <label htmlFor="email">correo electronico:</label><br></br>
+                <input type="text" id="email" onChange={(e) => { setPersona({ ...persona, email: e.target.value }) }} ></input><br></br>
 
                 <button onClick={async () => {
                     await createPerfil({ persona });
-                    navigate('/');
+                    Navigate('/');
                 }}>Registrarse</button>
             </form>
-
-
         </div >
     )
 }
