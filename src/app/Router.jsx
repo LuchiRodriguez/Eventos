@@ -1,5 +1,4 @@
-import React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Perfil from '../pages/Perfil'
 import Acceso from '../pages/Acceso'
 import EventoCreate from '../pages/EventoCreate'
