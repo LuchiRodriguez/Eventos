@@ -1,6 +1,5 @@
 //PAGINA DE LISTADO DE EVENTOS. 
 
-import React from 'react'
 
 const ListaEventos = () => {
     return (

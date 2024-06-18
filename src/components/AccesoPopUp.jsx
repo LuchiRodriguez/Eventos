@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import Acceso from "../pages/Acceso"
 
 const AccesoPopUp = () => {
     const [userExist, setUserExist] = useState({})
@@ -17,9 +17,9 @@ const AccesoPopUp = () => {
                     <label for="email">correo electronico:</label><br></br>
                     <input type="text" id="email" name="username" value="John"></input><br></br>
                     <input type="submit" value="Submit"></input>
-                    <button onClick={() => }>Crear Usuario</button>
+                    <button onClick={guardar}>Crear Usuario</button>
                 </form>
-            </div> :  <Registrar />)
+            </div> :  <Acceso />)
 
         </div >
     )
