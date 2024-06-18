@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { createEvento } from '../app/api';
+import { createPerfil } from '../app/api';
 
 const AccesoPopUp = () => {
     const [persona, setPersona] = useState({})
