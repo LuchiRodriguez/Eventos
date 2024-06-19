@@ -1,22 +1,24 @@
 //PAGINA DE INSCRIPCIÓN A UN EVENTO
 
-
 //TIENE QUE REGISTRAR EN EL EVENTO. 
 
 //dieta especial, acompañante (si/no, y cuantas personas (boton con números))
 
 const InscribirEvento = () => {
 
-    <div>Inscribirse usuario al evento</div>
+    return (
 
-    //INSCRIBIR
-    //perfil, evento
+        <div>Inscribirse usuario al evento</div>
 
-    //MODIFICAR
-    //evento
+        //INSCRIBIR
+        //perfil, evento
 
-    //LISTA DE OBJETOS
-    //lista con objetos
+        //MODIFICAR
+        //evento
+
+        //LISTA DE OBJETOS
+        //lista con objetos
+    )
 }
 
 export default InscribirEvento

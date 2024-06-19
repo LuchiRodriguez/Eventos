@@ -14,6 +14,7 @@ const EventoCreate = () => {
         console.log(res);
         return res;
     }
+    
     return (
         <div>Inscripción de un evento
             <p>Inserta tu nombre</p>
