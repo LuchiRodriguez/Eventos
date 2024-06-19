@@ -9,6 +9,7 @@ const EventoCreate = () => {
     const navigate = useNavigate();
     const [nombre, setNombre] = useState('');
     const [fecha, setFecha] = useState('');
+
     return (
         <div>Inscripción de un evento
             <p>Inserta el título de tu nuevo evento</p>
