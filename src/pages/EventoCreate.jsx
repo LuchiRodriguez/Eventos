@@ -8,6 +8,7 @@ const EventoCreate = () => {
     const [nombre, setNombre] = useState('');
     const [evento, setEvento] = useState('');
     const [fecha, setFecha] = useState('');
+
     return (
         <div>Inscripción de un evento
             <p>Inserta tu nombre</p>
@@ -19,7 +20,8 @@ const EventoCreate = () => {
             <p>Qué es necesario traer en el evento? </p>
             <textarea />
             <button onClick={async () => {
-                await createEvento({ nombre, evento, fecha })}}>Guardar</button>
+                await createEvento({ nombre, evento, fecha })
+            }}>Guardar</button>
         </div>
     )
 }
