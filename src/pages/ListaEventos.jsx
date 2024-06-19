@@ -3,8 +3,18 @@ import userImg from '../app/images/userIcon.png'
 import menu from '../app/images/menuIcon.png'
 import { Nav, Div } from './ListaEventosStyles'
 import { Link } from 'react-router-dom'
+import {useEffect, useState} from 'react';
+import {getEventos} from '../app/services/events';
 
 const ListaEventos = () => {
+    const [eventos, setEventos] = useState([]);
+
+    useEffect(() => {
+        getEventos().then(eventos => {
+            setEventos(eventos.data);
+        });
+    }, []);
+
     return (
         <div>
             <Nav>
@@ -18,18 +28,15 @@ const ListaEventos = () => {
             <Div>
                 <h1>Listado de eventos</h1>
                 <section>
-                    <div>
-                        <h2>Viernes de juegos</h2>
-                        <button>+</button>
-                    </div>
-                    <div>
-                        <h2>Noche de hamburguesas</h2>
-                        <button>+</button>
-                    </div>
-                    <div>
-                        <h2>Domingo de asadito</h2>
-                        <button>+</button>
-                    </div>
+                    {
+                        eventos.map(evento=>
+                            <div key={evento.id}>
+                                <h2>{evento.nombre}</h2>
+                                <p>{evento.fecha}</p>
+                                <button><Link to={'/inscribirevento'}>+</Link></button>
+                            </div>
+                        )
+                    }
                 </section>
                 <button>
                     <Link to={'/crearevento'}>Crear evento</Link>
