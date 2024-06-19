@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 import axios from 'axios';
+<<<<<<< HEAD:src/app/api.js
 const instance = axios.create({ baseURL: 'http://localhost:8080/NOMBRE' });
 
 export const setUserAndPassword = (user, password) => {
@@ -17,6 +18,9 @@ export const loguear = async (userName, password) => {
     }
   ).then((response) => console.log(response), (error) => console.log(error));
 }
+=======
+const instance = axios.create({ baseURL: 'http://localhost:8080/evento' });
+>>>>>>> master:src/app/services/events.js
 
 
 // CREATE
@@ -30,3 +34,6 @@ export const deleteEvento = async (id) => await instance.delete('/' + id)
 
 // CREATE PERFIL
 export const createPerfil = async (obj) => await instance.post('/', obj);
+
+//INSCRIBIR EVENTO
+export const inscribirPersona = async (id) => await instance.post('/', id) //aquí sería userId
