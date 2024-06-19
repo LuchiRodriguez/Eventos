@@ -1,26 +1,12 @@
 /* eslint-disable no-undef */
 import axios from 'axios';
-<<<<<<< HEAD:src/app/api.js
-const instance = axios.create({ baseURL: 'http://localhost:8080/NOMBRE' });
+const instance = axios.create({ baseURL: 'http://localhost:8080/evento' });
 
 export const setUserAndPassword = (user, password) => {
   i.default.headers.common.username = user;
   i.default.headers.common.password = password;
 };
 
-export const loguear = async (userName, password) => {
-  await axios.post("http://localhost:8080/login", {},
-    {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "basic " + btoa(userName + ":" + password),
-      },
-    }
-  ).then((response) => console.log(response), (error) => console.log(error));
-}
-=======
-const instance = axios.create({ baseURL: 'http://localhost:8080/evento' });
->>>>>>> master:src/app/services/events.js
 
 
 // CREATE
