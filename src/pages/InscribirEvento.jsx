@@ -6,14 +6,7 @@
 
 const InscribirEvento = () => {
 
-<<<<<<< HEAD
-
-    <div>
-
-    </div>
-=======
     return (
->>>>>>> master
 
         <div>Inscribirse usuario al evento</div>
 
