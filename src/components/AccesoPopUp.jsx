@@ -1,3 +1,4 @@
+import { useState } from "react"
 import Acceso from "../pages/Acceso"
 
 const AccesoPopUp = () => {
@@ -8,13 +9,13 @@ const AccesoPopUp = () => {
         <div>
             (userExist ? <div>
                 <form >
-                    <label for="username">Username:</label><br></br>
+                    <label htmlFor="username">Username:</label><br></br>
                     <input type="text" id="username" name="username" value="John"></input><br></br>
-                    <label for="pasword">Password:</label><br></br>
+                    <label htmlFor="pasword">Password:</label><br></br>
                     <input type="text" id="pasword" name="password" value="Doe"></input><br></br>
-                    <label for="edad">edad:</label><br></br>
+                    <label htmlFor="edad">edad:</label><br></br>
                     <input type="number" id="edad" name="edad" value="John"></input><br></br>
-                    <label for="email">correo electronico:</label><br></br>
+                    <label htmlFor="email">correo electronico:</label><br></br>
                     <input type="text" id="email" name="username" value="John"></input><br></br>
                     <input type="submit" value="Submit"></input>
                     <button onClick={guardar}>Crear Usuario</button>

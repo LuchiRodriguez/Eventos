@@ -14,7 +14,7 @@ const Acceso = () => {
         loguear(username, password)
     }
     return (
-        <Container>
+        <div>
             <h1>Bienvenido a BarnaEvents</h1>
             <div>
                 <h3>Acceso</h3>
@@ -22,12 +22,8 @@ const Acceso = () => {
                 <input type="text" placeholder="Password" onChange={setPassword(e.target.value)} />
                 <button onClick={login}>Login</button>
             </div>
-
-
             <button onClick={<AccesoPopUp />}>Crear Usuario</button>
-
-
-        </Container>
+        </div>
     )
 }
 

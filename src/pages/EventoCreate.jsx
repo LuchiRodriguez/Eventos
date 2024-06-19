@@ -2,7 +2,7 @@
 
 //CON UN DATE. 
 
-import React from 'react'
+import { useState } from 'react'
 import { createEvento } from '../app/api';
 
 const EventoCreate = () => {
