@@ -1,19 +1,21 @@
 //PAGINA DE LISTADO DE EVENTOS. 
-
-import EventoCreate from "./EventoCreate"
+import userImg from '../app/images/userIcon.png'
+import menu from '../app/images/menuIcon.png'
+import { Nav, Div } from './ListaEventosStyles'
+import { Link } from 'react-router-dom'
 
 const ListaEventos = () => {
     return (
         <div>
-            <nav>
+            <Nav>
                 <div>
-                    <img src="../app/images/userIcon.png" alt="" />
+                    <img src={userImg} alt="" />
                 </div>
                 <div>
-                    <img src="../app/images/menuIcon.png" alt="" />
+                    <img src={menu} alt="" width={32} height={32}/>
                 </div>
-            </nav>
-            <div>
+            </Nav>
+            <Div>
                 <h1>Listado de eventos</h1>
                 <section>
                     <div>
@@ -29,8 +31,10 @@ const ListaEventos = () => {
                         <button>+</button>
                     </div>
                 </section>
-                <button onClick={<EventoCreate />}>Crear evento</button>
-            </div>
+                <button>
+                    <Link to={'/crearevento'}>Crear evento</Link>
+                </button>
+            </Div>
         </div>
     )
 }

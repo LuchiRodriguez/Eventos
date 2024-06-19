@@ -2,18 +2,12 @@
 
 //CON UN DATE. 
 import { useState } from 'react';
-import { createEvento } from '../app/api';
+import { createEvento } from '../app/services/events';
 
 const EventoCreate = () => {
     const [nombre, setNombre] = useState('');
     const [evento, setEvento] = useState('');
     const [fecha, setFecha] = useState('');
-
-    const guardar = async () => {
-        const res = await createEvento({ nombre, evento, fecha })
-        console.log(res);
-        return res;
-    }
     return (
         <div>Inscripción de un evento
             <p>Inserta tu nombre</p>
@@ -24,7 +18,8 @@ const EventoCreate = () => {
             <input type="date" onChange={(e) => setFecha(e.target.value)} />
             <p>Qué es necesario traer en el evento? </p>
             <textarea />
-            <button onClick={guardar}></button>
+            <button onClick={async () => {
+                await createEvento({ nombre, evento, fecha })}}>Guardar</button>
         </div>
     )
 }

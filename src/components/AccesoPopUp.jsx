@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { createPerfil } from "../app/api"
+import { createPerfil } from "../app/services/events"
 import { Navigate } from "react-router-dom"
 
 const AccesoPopUp = () => {
