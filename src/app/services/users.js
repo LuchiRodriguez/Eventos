@@ -11,4 +11,4 @@ export const loguear = async (userName, password) => {
 }
 
 //INSCRIBIR EVENTO
-export const inscribirPersona = async (id) => await loguear.post('/', userId) //aquí sería userId
+export const inscribirPersona = async (id) => await loguear.post('/', id) //aquí sería userId

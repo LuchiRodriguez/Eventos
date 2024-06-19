@@ -6,12 +6,12 @@ import { useUserContext } from '../app/providers/UserProvider';
 
 const InscribirPersona = () => {
     const navigate = useNavigate();
-    const { user } = useContext(useUserContext); //aquí sería user
+    const { userId } = useContext(useUserContext); //aquí sería user
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
     const inscripcion = async () => {
-        if (!user) { //aquí sería user
+        if (!userId) { //aquí sería user
             setError("No estás autentificado");
             return;
         }
@@ -20,7 +20,7 @@ const InscribirPersona = () => {
         setError(null);
 
         try {
-            await inscribirPersona({ userId: user.id });
+            await inscribirPersona({ userId });
             navigate('/');
         } catch (err) {
             setError('Hubo un problema al inscribirte al evento. Inténtalo de nuevo');
