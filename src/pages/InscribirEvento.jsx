@@ -7,7 +7,10 @@
 
 const InscribirEvento = () => {
 
-    <div>Inscribirse usuario al evento</div>
+
+    <div>
+
+    </div>
 
 }
 
