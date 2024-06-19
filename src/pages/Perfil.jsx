@@ -1,4 +1,4 @@
-import {useUserContext} from '../app/providers/UserProvider';
+import { useUserContext } from '../app/providers/UserProvider';
 
 
 const Perfil = () => {
@@ -10,6 +10,7 @@ const Perfil = () => {
             <p>{userId.apellido}</p>
             <p>{userId.edad}</p>
             <p>{userId.intereses}</p>
+            <p>{userId.evento}</p>
         </div>
     )
 }
