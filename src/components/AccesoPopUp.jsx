@@ -1,27 +1,31 @@
 import { useState } from "react"
-import Acceso from "../pages/Acceso"
+import { createPerfil } from "../app/api"
+import { Navigate } from "react-router-dom"
 
 const AccesoPopUp = () => {
-    const [userExist, setUserExist] = useState({})
+    const [persona, setPersona] = useState({})
 
 
     return (
         <div>
-            (userExist ? <div>
-                <form >
-                    <label htmlFor="username">Username:</label><br></br>
-                    <input type="text" id="username" name="username" value="John"></input><br></br>
-                    <label htmlFor="pasword">Password:</label><br></br>
-                    <input type="text" id="pasword" name="password" value="Doe"></input><br></br>
-                    <label htmlFor="edad">edad:</label><br></br>
-                    <input type="number" id="edad" name="edad" value="John"></input><br></br>
-                    <label htmlFor="email">correo electronico:</label><br></br>
-                    <input type="text" id="email" name="username" value="John"></input><br></br>
-                    <input type="submit" value="Submit"></input>
-                    <button onClick={guardar}>Crear Usuario</button>
-                </form>
-            </div> :  <Acceso />)
+            <form >
+                <label htmlFor="username">Username:</label><br></br>
+                <input type="text" id="username" onChange={(e) => { setPersona({ ...persona, username: e.target.value }) }}></input><br></br>
 
+                <label htmlFor="pasword">Password:</label><br></br>
+                <input type="text" id="pasword" onChange={(e) => { setPersona({ ...persona, password: e.target.value }) }} ></input><br></br>
+
+                <label htmlFor="edad">edad:</label><br></br>
+                <input type="number" id="edad" onChange={(e) => { setPersona({ ...persona, edad: e.target.value }) }}></input><br></br>
+
+                <label htmlFor="email">correo electronico:</label><br></br>
+                <input type="text" id="email" onChange={(e) => { setPersona({ ...persona, email: e.target.value }) }} ></input><br></br>
+
+                <button onClick={async () => {
+                    await createPerfil({ persona });
+                    Navigate('/');
+                }}>Registrarse</button>
+            </form>
         </div >
     )
 }

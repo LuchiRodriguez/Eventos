@@ -1,8 +1,7 @@
 //PAGINA DE NUEVO EVENTO, DONDE EL USUARIO PODRÁ CREAR UN NUEVO EVENTO INDICANDO SU FECHA.
 
 //CON UN DATE. 
-
-import { useState } from 'react'
+import { useState } from 'react';
 import { createEvento } from '../app/api';
 
 const EventoCreate = () => {
