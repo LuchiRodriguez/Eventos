@@ -2,15 +2,16 @@
 import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { inscribirPersona } from "../app/api";
+import { useUserContext } from '../app/providers/UserProvider';
 
 const InscribirPersona = () => {
     const navigate = useNavigate();
-    const { id } = useContext(UserContext); //aquí sería user
+    const { user } = useContext(useUserContext); //aquí sería user
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
     const inscripcion = async () => {
-        if (!id) { //aquí sería user
+        if (!user) { //aquí sería user
             setError("No estás autentificado");
             return;
         }
@@ -19,7 +20,7 @@ const InscribirPersona = () => {
         setError(null);
 
         try {
-            await inscribirPersona({ id }); //aquí sería userId : user.id
+            await inscribirPersona({ userId: user.id });
             navigate('/');
         } catch (err) {
             setError('Hubo un problema al inscribirte al evento. Inténtalo de nuevo');
