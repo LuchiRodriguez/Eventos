@@ -21,5 +21,3 @@ export const deleteEvento = async (id) => await instance.delete('/' + id)
 // CREATE PERFIL
 export const createPerfil = async (obj) => await instance.post('/', obj);
 
-//INSCRIBIR EVENTO
-export const inscribirPersona = async (id) => await instance.post('/', id) //aquí sería userId
