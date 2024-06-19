@@ -2,6 +2,11 @@
 import axios from 'axios';
 const instance = axios.create({ baseURL: 'http://localhost:8080/NOMBRE' });
 
+export const setUserAndPassword = (user, password) => {
+  i.default.headers.common.username = user;
+  i.default.headers.common.password = password;
+};
+
 export const loguear = async (userName, password) => {
   await axios.post("http://localhost:8080/login", {},
     {
