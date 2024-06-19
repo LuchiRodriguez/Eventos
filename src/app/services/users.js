@@ -1,5 +1,10 @@
 import axios from 'axios';
+<<<<<<< HEAD
 export const loguear = async (username, password) => {
+=======
+
+export const loguear = async (userName, password) => {
+>>>>>>> master
   await axios.post("http://localhost:8080/user", {},
 
     {

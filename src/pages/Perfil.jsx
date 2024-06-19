@@ -1,13 +1,15 @@
+import {useUserContext} from '../app/providers/UserProvider';
 
 
 const Perfil = () => {
+    const { userId } = useUserContext();
     return (
         <div>
             <h1>Datos personales</h1>
-            <p>{nombre}</p>
-            <p>{apellido}</p>
-            <p>{edad}</p>
-            <p>{intereses}</p>
+            <p>{userId.nombre}</p>
+            <p>{userId.apellido}</p>
+            <p>{userId.edad}</p>
+            <p>{userId.intereses}</p>
         </div>
     )
 }
