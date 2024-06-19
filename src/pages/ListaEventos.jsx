@@ -5,8 +5,10 @@ import { Nav, Div } from './ListaEventosStyles'
 import { Link } from 'react-router-dom'
 import {useEffect, useState} from 'react';
 import {getEventos} from '../app/services/events';
+import { useNavigate } from 'react-router-dom';
 
 const ListaEventos = () => {
+    const navigate = useNavigate();
     const [eventos, setEventos] = useState([]);
 
     useEffect(() => {
@@ -19,7 +21,7 @@ const ListaEventos = () => {
         <div>
             <Nav>
                 <div>
-                    <img src={userImg} alt="" />
+                    <img src={userImg} alt="" onClick={()=> navigate('/perfil')}/>
                 </div>
                 <div>
                     <img src={menu} alt="" width={32} height={32}/>
